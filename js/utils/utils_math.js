@@ -473,3 +473,12 @@ export function proj_scalar(v, u) {
     return n/d;
 }
 
+
+
+export function cross_product_matrix(v) {
+    return [
+        [0, -v[2], v[1]],
+        [v[2], 0, -v[0]],
+        [-v[1], v[0], 0]
+    ];
+}

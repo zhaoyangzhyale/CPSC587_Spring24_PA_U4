@@ -327,6 +327,8 @@ export class XArm7Robot extends RobotBaseClass {
         let joint17 = new RobotJointFixed('right_inner_knuckle_joint', 17, 12, 18, [0.0, -0.02, 0.074098], [0,0,0]);
         let joint18 = new RobotJointFixed('joint_tcp', 18, 12, 19,  [0.0, 0.0, 0.172], [0,0,0]);
 
+        // return [joint0, joint1, joint2];
+
         return [joint0, joint1, joint2, joint3, joint4, joint5, joint6, joint7, joint8, joint9, joint10, joint11, joint12, joint13, joint14, joint15, joint16, joint17, joint18];
     }
 
@@ -352,10 +354,13 @@ export class XArm7Robot extends RobotBaseClass {
         let link18 = new RobotLink('right_inner_knuckle', 18, 17, [], 12, [], 'right_inner_knuckle.glb');
         let link19 = new RobotLink('link_tcp', 19, 18, [], 12, []);
 
+        // return [link0, link1, link2, link3];
+
         return [link0, link1, link2, link3, link4, link5, link6, link7, link8, link9, link10, link11, link12, link13, link14, link15, link16, link17, link18, link19];
     }
 
     get_robot_kinematic_hierarchy() {
+        // return [[0], [1], [2], [3]];
         return [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13, 15, 16, 18, 19], [14, 17]];
     }
 }
