@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CPSC 487/587</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.19.1/dist/lil-gui.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.3.0/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quaternion@1.5.1/quaternion.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/numeric@1.2.6/numeric-1.2.6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stats.js@0.17.0/build/stats.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+              "three/": "https://unpkg.com/three@0.160.0/"
+            }
+        }
+    </script>
+</head>
+<body>
+<script type="module">
+    import {ThreeEngine} from "../js/utils/utils_three.js";
+    import {B1Z1Robot, XArm7Robot} from "../js/utils/utils_robot.js";
+
+    // todo: create a visualization that demonstrates your knowledge of forward kinematics on a robot model.
+    // todo: The "default" assignment is to recreate this visualization:
+    // todo: https://yale-cpsc-487-587-internal-djrakita-c95fa6c3239a481a48d29a6b0fd.gitlab.io/html/unit4_visualizations/fk.html
+    // todo: or this visualization:
+    // todo: https://yale-cpsc-487-587-internal-djrakita-c95fa6c3239a481a48d29a6b0fd.gitlab.io/html/unit4_visualizations/fk2.html
+    // todo: however, feel free to deviate from this if you want to.
+    // todo: I will be adding information to the class wiki on important properties and subroutines regarding the robot
+    // todo: object created for this class.  If you have questions, refer to that wiki or ask me over slack.
+
+    let engine = ThreeEngine.new_default_3d();
+
+    // if you want to use the XArm7 robot:
+    let robot = new XArm7Robot();
+
+    // or, if you want to use the B1Z1 robot, comment the previous robot and uncomment this line:
+    // let robot = new B1Z1Robot();
+
+    // this will spawn all of the robot's links at the origin
+    robot.spawn_robot(engine);
+
+    engine.animation_loop( ()  => {
+
+    });
+
+</script>
+</body>
+</html>
