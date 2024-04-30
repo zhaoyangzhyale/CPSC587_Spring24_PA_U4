@@ -189,7 +189,7 @@ export class RobotBaseClass {
             let link_mesh_name = link.mesh_name;
             if (link_mesh_name !== '') {
                 let link_idx = link.link_idx;
-                let fp = '../../' + this.robot_links_mesh_directory_name + '/' + link.mesh_name;
+                let fp = '../' + this.robot_links_mesh_directory_name + '/' + link.mesh_name;
                 let idxs = await engine.add_gltf_mesh_object(fp);
                 idxs.forEach(idx => {
                     this.link_to_mesh_idxs_mapping[link_idx].push(idx);
